@@ -1,13 +1,15 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppConfigModule } from './config/app/configuration.module';
+import { OpenAPIConfigModule } from './config/openapi/configuration.module';
 import { UsersModule } from './models/users/users.module';
 import { PostgresqlDatabaseProviderModule } from './providers/database/postgresql//provider.module';
 @Module({
   imports: [
     AppConfigModule,
-    UsersModule,
+    OpenAPIConfigModule,
     PostgresqlDatabaseProviderModule,
+    UsersModule,
     ConfigModule.forRoot(),
   ],
   controllers: [],
