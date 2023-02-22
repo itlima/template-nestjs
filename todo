@@ -18,11 +18,9 @@ Configurar seeders no repositório
 Ler serializers
 Buscar como acrescentar flag no git sobre vulnerabilidades
 
-
-
-- Configurar Health check
-
-Criar dockerfile
-Criar Docker compose
-Criar vscode launcher
-Configurar migrations e Typeorm
+- [x] Criar dockerfile
+- [x] Criar Docker compose
+- [x] Configurar migrations e Typeorm
+- [] Configurar Health check
+- [] Criar vscode launcher
+- [] Criar makefile
