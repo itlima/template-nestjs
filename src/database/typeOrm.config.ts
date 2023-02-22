@@ -20,8 +20,3 @@ const postgresqlDataSource = new DataSource({
 });
 
 export default postgresqlDataSource;
-
-postgresqlDataSource
-  .initialize()
-  .then(() => console.log('Data Source has been initialized'))
-  .catch((error) => console.error('Error initializing Data Source', error));

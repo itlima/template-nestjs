@@ -5,10 +5,8 @@ COMMIT_ID=$(shell git log -n 1 --decorate=no --no-merges | head -1 | cut -f2 -d'
 LIB_AUTH_PROJECT_URL:=gitlab.com/api/v4/projects/${LIB_AUTH_PROJECT_ID}/packages/npm/
 
 check-flag:
-	ifndef name
-	$(error Var name is not set. Try "make command name=foo")
-	endif
-
+	@[ "${name}" ] || ( echo ">> name is not set"; exit 1 )
+	
 create-migration: check-flag
 	NAME=$(name) yarn typeorm:create-migration
 generate-migration: check-flag

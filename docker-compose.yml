@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  database:
+    container_name: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    image: postgres:alpine
+    network_mode: "host"
+
+  api-template:
+    depends_on:
+      - database
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: api-template
+    volumes:
+      - ./:/usr/src/app:z
+    network_mode: "host"
+    restart: on-failure
+    environment:
+      # database > postgresql
+      POSTGRESQL_HOST:
+      POSTGRESQL_PORT: 
+      POSTGRESQL_USERNAME:
+      POSTGRESQL_PASSWORD:
+      POSTGRESQL_DATABASE:
+      # app 
+      APP_ENV: development
+      APP_NAME: api-template
+      APP_URL: localhost
+      APP_PORT: 4000
+    command: sh -c "yarn typeorm:run-migration && yarn start:debug"
