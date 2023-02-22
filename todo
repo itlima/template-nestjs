@@ -1,2 +1,28 @@
+- [ ]  Entender funcionamento das migrations
+- [ ]  Melhorar docker compose para copiar apenas os arquivos necessários
+- [ ]  Entender como configurar o download de registros da API
+- [ ]  Entender como realizar a paginação dos dados fornecidos
+- [ ]  Criar helm chart
+- [ ]  Configurar vscode debug
+- [ ]  Adicionar bloqueo de váriaveis de ambiente quando o docker compose estiver funcionando.
+- [ ]  Documentar uso de migrations
+- [ ]  Buscar como acrescentar flag no git sobre vulnerabilidades
+- [ ]  Configurar autenticação
+- [ ]  Unificar datasource
+- [ ]  Configurar migration para ler todas as entidades do projeto
+- [ ]  Checar middwalle em tempo de construção e não runtime
+- [ ]  Configurar swagger no repositório
+
+
+Configurar seeders no repositório
 Ler serializers
 Buscar como acrescentar flag no git sobre vulnerabilidades
+
+
+
+- Configurar Health check
+
+Criar dockerfile
+Criar Docker compose
+Criar vscode launcher
+Configurar migrations e Typeorm
