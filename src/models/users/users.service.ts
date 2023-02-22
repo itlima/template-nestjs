@@ -10,15 +10,19 @@ export class UsersService {
     private readonly usersRepository: Repository<User>,
   ) {}
 
-  findAll(): Promise<User[]> {
+  findAll() {
     return this.usersRepository.find();
   }
 
-  findOne(id: string): Promise<User> {
+  findOne(id: string) {
     return this.usersRepository.findOneBy({ id });
   }
 
-  async remove(id: string): Promise<void> {
-    await this.usersRepository.delete(id);
+  create(body) {
+    return this.usersRepository.save(body);
+  }
+
+  remove(id: string) {
+    this.usersRepository.delete(id);
   }
 }
