@@ -23,14 +23,16 @@ services:
     restart: on-failure
     environment:
       # database > postgresql
-      POSTGRESQL_HOST:
-      POSTGRESQL_PORT: 
-      POSTGRESQL_USERNAME:
-      POSTGRESQL_PASSWORD:
-      POSTGRESQL_DATABASE:
+      POSTGRESQL_HOST: localhost
+      POSTGRESQL_PORT:  5432
+      POSTGRESQL_USERNAME: postgres
+      POSTGRESQL_PASSWORD: postgres
+      POSTGRESQL_DATABASE: postgres
       # app 
-      APP_ENV: development
-      APP_NAME: api-template
-      APP_URL: localhost
-      APP_PORT: 4000
+      APP_PREFIX: /v1
+      APP_PORT: 9001
+      # openapi
+      OPENAPI_NAME: API template
+      OPENAPI_DESCRIPTION: Model API for future applications
+      OPENAPI_PREFIX: /docs
     command: sh -c "yarn typeorm:run-migration && yarn start:debug"
