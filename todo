@@ -21,6 +21,7 @@ Buscar como acrescentar flag no git sobre vulnerabilidades
 - [x] Criar dockerfile
 - [x] Criar Docker compose
 - [x] Configurar migrations e Typeorm
-- [] Configurar Health check
+- [x] Criar makefile
+- [x] Configurar Health check
 - [] Criar vscode launcher
-- [] Criar makefile
+- [] Configurar swagger
