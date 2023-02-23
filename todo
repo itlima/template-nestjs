@@ -1,27 +1,33 @@
-- [ ]  Entender funcionamento das migrations
+# Roadmap
+
 - [ ]  Melhorar docker compose para copiar apenas os arquivos necessários
 - [ ]  Entender como configurar o download de registros da API
 - [ ]  Entender como realizar a paginação dos dados fornecidos
 - [ ]  Criar helm chart
-- [ ]  Configurar vscode debug
 - [ ]  Adicionar bloqueo de váriaveis de ambiente quando o docker compose estiver funcionando.
 - [ ]  Documentar uso de migrations
 - [ ]  Buscar como acrescentar flag no git sobre vulnerabilidades
 - [ ]  Configurar autenticação
 - [ ]  Unificar datasource
-- [ ]  Configurar migration para ler todas as entidades do projeto
 - [ ]  Checar middwalle em tempo de construção e não runtime
-- [ ]  Configurar swagger no repositório
 
 
 Configurar seeders no repositório
 Ler serializers
 Buscar como acrescentar flag no git sobre vulnerabilidades
 
+- [x]  Configurar migration para ler todas as entidades do projeto
+- [x]  Entender funcionamento das migrations
+- [x]  Configurar vscode debug
 - [x] Criar dockerfile
 - [x] Criar Docker compose
 - [x] Configurar migrations e Typeorm
 - [x] Criar makefile
 - [x] Configurar Health check
-- [] Criar vscode launcher
-- [] Configurar swagger
+- [x] Criar vscode launcher
+- [x] Configurar swagger
+- [ ] Configurar testes de e2e e unitários
+
+Fontes:
+ https://github.com/typeorm/typeorm/issues/8814#issuecomment-1080945772
+ https://github.com/typeorm/typeorm/issues/8810
