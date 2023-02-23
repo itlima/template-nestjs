@@ -10,10 +10,11 @@ async function bootstrap() {
   const appConfig: AppConfigService = app.get(AppConfigService);
   const openAPI: OpenAPIConfigService = app.get(OpenAPIConfigService);
 
+  app.setGlobalPrefix(appConfig.prefix);
+
   const document = SwaggerModule.createDocument(app, openAPI.config);
   SwaggerModule.setup(openAPI.prefix, app, document);
 
-  app.setGlobalPrefix(appConfig.prefix);
   await app.listen(appConfig.port);
 }
 bootstrap();

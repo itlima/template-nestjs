@@ -10,7 +10,6 @@ export class OpenAPIConfigService {
     const openapiPrefix = this.configService.get<string>('openapi.prefix');
     const appPrefix = this.configService.get<string>('app.prefix');
     const prefix = appPrefix + openapiPrefix;
-    console.log(prefix)
     return prefix;
   }
 
