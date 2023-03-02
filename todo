@@ -10,7 +10,10 @@
 - [ ]  Configurar autenticação
 - [ ]  Unificar datasource
 - [ ]  Checar middwalle em tempo de construção e não runtime
-
+- [ ]  Procurar headers que devem ser configurados nas APIs
+- [ ]  Configurar exception handler
+- [ ]  Configurar logging handler
+- [ ]  Entender diferença entre Promise e Observable
 
 Configurar seeders no repositório
 Ler serializers
@@ -27,7 +30,17 @@ Buscar como acrescentar flag no git sobre vulnerabilidades
 - [x] Criar vscode launcher
 - [x] Configurar swagger
 - [ ] Configurar testes de e2e e unitários
-
+- [ ] Configurar comando no make para salvar o pacote helm no registry da google ou qualquer outro registry.
+- [ ] Procurar registries helm ou imagem disponíveis gratuitamente.
+- [ ] Configurar um Middleware
+- [ ] Melhorar camada de exception filter
+- [ ] Podemos fazer o esquema de request ID via middleware
 Fontes:
  https://github.com/typeorm/typeorm/issues/8814#issuecomment-1080945772
  https://github.com/typeorm/typeorm/issues/8810
+
+
+- Designe pattern IoC
+https://angular.io/guide/dependency-injection
+
+
