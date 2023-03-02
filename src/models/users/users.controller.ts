@@ -1,10 +1,20 @@
-import { Get, Controller, Post, Body } from '@nestjs/common';
+import {
+  Get,
+  Controller,
+  Post,
+  Body,
+  HttpException,
+  HttpStatus,
+  UseFilters,
+} from '@nestjs/common';
 import { ApiCreatedResponse, ApiResponse } from '@nestjs/swagger';
+import { HttpExceptionFilter } from 'common/exceptions/filters/http-exception.filter';
 import { CreateUserDto } from './dto/user.dto';
 import { User } from './entities/user.entity';
 import { UsersService } from './users.service';
 
 @Controller('users')
+@UseFilters(new HttpExceptionFilter())
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
@@ -14,7 +24,25 @@ export class UsersController {
     type: [User],
   })
   async listUsers(): Promise<User[]> {
-    return this.usersService.findAll();
+    throw new HttpException(
+      {
+        status: HttpStatus.FORBIDDEN,
+        error: 'This is a custom message',
+      },
+      HttpStatus.FORBIDDEN,
+    );
+    try {
+      return this.usersService.findAll();
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.FORBIDDEN,
+          error: 'This is a custom message',
+        },
+        HttpStatus.FORBIDDEN,
+        { cause: error },
+      );
+    }
   }
 
   @Post()
